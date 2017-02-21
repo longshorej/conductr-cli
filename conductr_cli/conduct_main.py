@@ -85,7 +85,8 @@ def add_local_connection_flag(sub_parser):
     sub_parser.add_argument('--local-connection',
                             default=True,
                             dest='local_connection',
-                            help=argparse.SUPPRESS)
+                            help=argparse.SUPPRESS,
+                            action='store_true')
 
 
 def add_cli_settings_dir(sub_parser):
