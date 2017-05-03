@@ -21,6 +21,12 @@ BINTRAY_CONDUCTR_GENERIC_REPO = 'generic'
 BINTRAY_CONDUCTR_CORE_PACKAGE_NAME = 'ConductR-Universal'
 BINTRAY_CONDUCTR_AGENT_PACKAGE_NAME = 'ConductR-Agent-Universal'
 
+logging.basicConfig()
+logging.getLogger().setLevel(logging.DEBUG)
+requests_log = logging.getLogger("requests.packages.urllib3")
+requests_log.setLevel(logging.DEBUG)
+requests_log.propagate = True
+
 
 def resolve_bundle(cache_dir, uri):
     log = logging.getLogger(__name__)
